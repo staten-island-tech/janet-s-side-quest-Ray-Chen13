@@ -19,10 +19,19 @@ rental_request = {
         if values <= value:
             print(f"Movie {x} is out of stock.")
  """
-for x, values in rental_request.items():
-    for x, value in movie_store.items():
-        if value["stock"] == 0:
-            print(f"Movie {x} is out of stock")
-            del(values)
-            
-
+z = 0
+a = 0
+for i, values in rental_request.items():
+    z = z + values
+for x, value in movie_store.items():
+    a = (a + value["price"])
+if ["genre"] == "Horror":
+    a = a-2
+    print(a)
+elif value["stock"] == 0:
+    print(f"Movie {x} is out of stock.")
+if value["stock"] == 0:
+    print(f"Movie {x} is out of stock")
+    if z >= 3:
+        a * 0.95
+print(a*.95)
