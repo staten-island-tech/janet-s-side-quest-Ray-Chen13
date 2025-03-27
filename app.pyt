@@ -42,7 +42,7 @@ if value["stock"] == 0:
         a * 0.95
 print(a*.95) """
 
-total_price = 0
+""" total_price = 0
 total_movies = 0
 for i, value in movie_store.items():
     total_price = (total_price + value['price'])
@@ -50,8 +50,17 @@ for i, value in movie_store.items():
     if value['stock'] == 0:
         print(f"Movie {i} is out of stock.")
     elif movie_store[i]['genre'] == "Horror":
-        print(total_price-2)
         print(f"A Two Dollar Discount because {i} is a Horror Movie")
-if z >= 3:
-    print("A 5% Discount will be applied because you rented 3 or more movies")    
-print(total_price*.95)
+    if z >= 3:
+        print("A 5% Discount will be applied because you rented 3 or more movies")    
+print(total_price*.95) """
+
+class Merchant:
+    def __init__(self, name, products):
+        self.name= name
+        self.products= products
+    def sell(self,item):
+        self.products.remove(item)
+        print(self.products)
+Rachel = Merchant("Rachel", ["Apples", "Oranges", "Humans"])
+print(Rachel.sell("Humans"))
